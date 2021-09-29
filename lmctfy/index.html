@@ -4,19 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Let Me Code That For You!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../resources/app.css">
 </head>
 <body>
-<h1>Let Me Code That For You!</h1>
-<div id="wrap" style="display:none">
+<a class="github-fork-ribbon right-top" href="https://github.com/bryntum/fiddle-player" data-ribbon="Fork me on GitHub"
+   title="Fork me on GitHub">Fork me on GitHub</a><!-- TOP RIGHT RIBBON: END COPYING HERE -->
+
+<h1>Let Me <code>{Code}</code> That For You!</h1>
+<div id="wrap">
     <div id="code-input"></div>
     <div class="link-container">
         <input id="url" readonly type="text" value="https://lmctfy.net?c=" maxlength="2048"/>
         <button id="copyToClipboard" title="Copy URL to clipboard">COPY TO CLIPBOARD</button>
     </div>
 </div>
-<tutorial-panel id="codePanel" style="display:none" id="codePanel" data-auto-start="true" stylesheet="../../../Grid/build/grid.classic-dark.css" data-resource-root="../resources"
-                fa-path="../../../Core/build/fonts"></tutorial-panel>
+<tutorial-panel
+    id="codePanel"
+    data-auto-start="true"
+    stylesheet="//bryntum.com/dist/grid/build/grid.classic-dark.css"
+    data-resource-root="//bryntum.com/dist/grid/resources"
+    fa-path="//bryntum.com/dist/grid/build/fonts">
+</tutorial-panel>
 <script type="module" src="app.js"></script>
 </body>
 </html>
