@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Let Me Code That For You!</title>
+    <link rel="stylesheet" href="../resources/app.css">
+</head>
+<body>
+<h1>Let Me Code That For You!</h1>
+<div id="wrap" style="display:none">
+    <div id="code-input"></div>
+    <div class="link-container">
+        <input id="url" readonly type="text" value="https://lmctfy.net?c=" maxlength="2048"/>
+        <button id="copyToClipboard" title="Copy URL to clipboard">COPY TO CLIPBOARD</button>
+    </div>
+</div>
+<tutorial-panel id="codePanel" style="display:none" id="codePanel" data-auto-start="true" stylesheet="../../../Grid/build/grid.classic-dark.css" data-resource-root="../resources"
+                fa-path="../../../Core/build/fonts"></tutorial-panel>
+<script type="module" src="app.js"></script>
+</body>
+</html>
