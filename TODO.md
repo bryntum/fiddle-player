@@ -10,6 +10,7 @@
 * New learning center
 * Define scenarios to be created by new (external) resource?
 * Demo bot support?
+* Centered big Click-to-start button in player 
 
 * V2
 * Handle new lines entered with Enter key
