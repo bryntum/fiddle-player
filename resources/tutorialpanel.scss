@@ -2,7 +2,6 @@
     display          : flex;
     flex             : 1;
     height           : 100%;
-    background-color : #0d2e4e;
     overflow         : hidden;
 
     &, * {
@@ -23,6 +22,7 @@
         display        : flex;
         flex-direction : column;
         overflow       : hidden;
+        background-color : #0d2e4e;
     }
 
     pre {

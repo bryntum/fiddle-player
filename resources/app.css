@@ -7,15 +7,33 @@ html * {
     box-sizing : border-box;
 }
 
+body {
+    display         : flex;
+    justify-content : flex-start;
+    margin          : 0;
+    flex-flow       : column nowrap;
+    align-items     : center;
+    font-family     : Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    padding         : 3em 0 0 0;
+}
+
 header {
     display        : flex;
     flex-direction : column;
     margin-bottom  : 2em;
 }
 
+footer {
+    width           : 100%;
+    margin          : 2.5em 0 0.5em 0;
+    align-items     : flex-end;
+    display         : flex;
+    justify-content : flex-end;
+    padding-right   : 0.em;
+}
+
 code {
     font-family : 'Source Code Pro', monospace;
-    background  : #eee;
     padding     : 0 0.05em;
     font-weight : 400;
 }
@@ -42,16 +60,6 @@ h1 {
     margin      : 0;
     font-weight : 300;
     font-size   : 45px;
-}
-
-body {
-    display         : flex;
-    justify-content : flex-start;
-    margin          : 0;
-    flex-flow       : column nowrap;
-    align-items     : center;
-    font-family     : Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
-    padding         : 3em 0;
 }
 
 #wrap {

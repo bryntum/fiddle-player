@@ -1,4 +1,4 @@
-import '../lib/TutorialPanel.js';
+import './lib/TutorialPanel.js';
 
 const
     copyToClipboard = (code) => {
