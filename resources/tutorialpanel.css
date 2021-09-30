@@ -60,6 +60,7 @@
   cursor: text;
 }
 .b-tutorialpanel pre .comment,
+.b-tutorialpanel pre .block-comment,
 .b-tutorialpanel pre .comment .keyword,
 .b-tutorialpanel pre .comment .string {
   color: #90a4ae;
