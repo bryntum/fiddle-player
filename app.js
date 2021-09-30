@@ -41,7 +41,7 @@ const
         codePanel.dataset['initialCode'] = code;
     }
     else {
-        await loadScript('https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js');
+        await loadScript('https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.13/ace.js');
 
         const
             wrap          = document.getElementById('wrap'),
@@ -53,8 +53,8 @@ const
             copyButton    = document.getElementById('copyToClipboard');
 
         wrap.style.display = 'flex';
-        editor.renderer.setPadding(10);
-        editor.renderer.setScrollMargin(20);
+        // editor.renderer.setPadding(10);
+        // editor.renderer.setScrollMargin(10);
         editor.setTheme('ace/theme/monokai');
         editor.session.setMode('ace/mode/javascript');
 
