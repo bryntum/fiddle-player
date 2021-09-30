@@ -33,7 +33,19 @@ StartTest(t => {
         await t.waitForSelector('tutorial-panel -> .b-codepanel-result:empty');
         await t.waitForSelector('tutorial-panel -> .b-line-visible');
 
-        t.selectorExists('tutorial-panel -> .b-line:nth-child(7) .comment:textEquals(// Define the columns to show in the grid (you can add / remove programmatically too))', 'Solo inline comment OK');
-        t.selectorExists('tutorial-panel -> .b-line:nth-child(17) .comment:textEquals(// End of line inline comment)', 'Inline comment after code OK');
+        t.selectorExists('tutorial-panel -> .b-line:nth-child(2) .block-comment:textEquals(/*)', 'Block comment starts OK');
+        t.selectorExists('tutorial-panel -> .b-line:nth-child(3) .block-comment:nth-child(1):textEquals(*)', 'Min block comment OK');
+        t.selectorExists('tutorial-panel -> .b-line:nth-child(3) .block-comment:nth-child(2):textEquals(bar)', 'Mid block comment OK');
+        t.selectorExists('tutorial-panel -> .b-line:nth-child(4) .block-comment:nth-child(1):textEquals(*)', 'End block comment OK');
+        t.selectorExists('tutorial-panel -> .b-line:nth-child(4) .block-comment:nth-child(2):textEquals(*/)', 'End block comment OK');
+
+        t.selectorExists('tutorial-panel -> .b-line:nth-child(5) .block-comment-start:nth-child(1):textEquals(/*foo)', 'Inline block comment start OK');
+        t.selectorExists('tutorial-panel -> .b-line:nth-child(5) .block-comment-end:nth-child(2):textEquals(*/)', 'Inline block comment end OK');
+        t.selectorExists('tutorial-panel -> .b-line:nth-child(5) span.keyword:nth-child(3):textEquals(const)', 'Keyword after inline block comment OK');
+
+        t.selectorExists('tutorial-panel -> .b-line:nth-child(13) .block-comment-start:textEquals(/*foo)', 'Inline block comment OK');
+
+        t.selectorExists('tutorial-panel -> .b-line:nth-child(13) .block-comment-start:textEquals(/*foo)', 'Inline block comment OK');
+        t.selectorExists('tutorial-panel -> .b-line:nth-child(13) .block-comment-end:textEquals(*/)', 'Inline block comment OK');
     });
 });
