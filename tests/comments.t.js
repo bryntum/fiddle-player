@@ -20,17 +20,17 @@ StartTest(t => {
     t.it('Should process inline comments', async t => {
         await t.waitForSelector('tutorial-panel -> .b-tutorialpanel');
         await t.waitForSelector('tutorial-panel -> .b-tutorialpanel code.b-idle');
-        await t.waitForSelector('tutorial-panel -> .b-codepanel-result:empty');
+        await t.waitForSelector('tutorial-panel -> .b-codepanel-result:not(:empty)');
         await t.waitForSelector('tutorial-panel -> .b-line-visible');
 
-        t.selectorExists('tutorial-panel -> .b-line:nth-child(7) .comment:textEquals(// Define the columns to show in the grid (you can add / remove programmatically too))', 'Solo inline comment OK');
-        t.selectorExists('tutorial-panel -> .b-line:nth-child(17) .comment:textEquals(// End of line inline comment)', 'Inline comment after code OK');
+        t.selectorExists('tutorial-panel -> .b-line:nth-child(9) .comment:textEquals(// Define the columns to show in the grid (you can add / remove programmatically too))', 'Solo inline comment OK');
+        t.selectorExists('tutorial-panel -> .b-line:nth-child(19) .comment:textEquals(// End of line inline comment)', 'Inline comment after code OK');
     });
 
-    t.iit('Should process multiline comments', async t => {
+    t.it('Should process multiline comments', async t => {
         await t.waitForSelector('tutorial-panel -> .b-tutorialpanel');
         await t.waitForSelector('tutorial-panel -> .b-tutorialpanel code.b-idle');
-        await t.waitForSelector('tutorial-panel -> .b-codepanel-result:empty');
+        await t.waitForSelector('tutorial-panel -> .b-codepanel-result:not(:empty)');
         await t.waitForSelector('tutorial-panel -> .b-line-visible');
 
         t.selectorExists('tutorial-panel -> .b-line:nth-child(2) .block-comment:textEquals(/*)', 'Block comment starts OK');
@@ -47,5 +47,7 @@ StartTest(t => {
 
         t.selectorExists('tutorial-panel -> .b-line:nth-child(13) .block-comment-start:textEquals(/*foo)', 'Inline block comment OK');
         t.selectorExists('tutorial-panel -> .b-line:nth-child(13) .block-comment-end:textEquals(*/)', 'Inline block comment OK');
+
+        t.selectorExists('tutorial-panel -> .b-line:nth-child(18) .block-comment-end:textEquals(foo*/)', 'Inline block comment OK');
     });
 });
