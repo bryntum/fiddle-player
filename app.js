@@ -53,7 +53,8 @@ const
             copyButton    = document.getElementById('copyToClipboard');
 
         wrap.style.display = 'flex';
-
+        editor.renderer.setPadding(10);
+        editor.renderer.setScrollMargin(20);
         editor.setTheme('ace/theme/monokai');
         editor.session.setMode('ace/mode/javascript');
 

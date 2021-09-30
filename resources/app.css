@@ -17,6 +17,10 @@ body {
     padding         : 3em 0 0 0;
 }
 
+body * {
+    font-family : Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
 header {
     display        : flex;
     flex-direction : column;
@@ -30,6 +34,7 @@ footer {
     display         : flex;
     justify-content : flex-end;
     padding-right   : 0.5em;
+    font-size       : 0.8em;
 }
 
 code {
@@ -84,7 +89,6 @@ h1 {
     font-family   : 'Source Code Pro', monospace;
 }
 
-
 .link-container {
     display         : flex;
     justify-content : center;
@@ -95,12 +99,13 @@ h1 {
 }
 
 input {
-    padding   : 1em;
-    cursor    : pointer;
-    color     : #888;
-    border    : 1px solid #888;
-    flex      : 1;
-    font-size : 18px;
+    padding     : 1em;
+    cursor      : pointer;
+    color       : #888;
+    border      : 1px solid #888;
+    flex        : 1;
+    font-size   : 1.4em;
+    font-weight : 300;
 }
 
 .link-container button {
@@ -115,15 +120,16 @@ input {
 }
 
 .link-container a {
-    display : flex;
+    display         : flex;
+    text-decoration : none;
 }
 
 #copyToClipboard {
     background : #6202ee;
 }
 
-#copyToClipboard:hover {
-    background : #6202eed3;
+.link-container button:hover {
+    filter : brightness(1.1);
 }
 
 .ace_print-margin {
