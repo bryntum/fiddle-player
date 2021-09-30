@@ -29,7 +29,7 @@ footer {
     align-items     : flex-end;
     display         : flex;
     justify-content : flex-end;
-    padding-right   : 0.em;
+    padding-right   : 0.5em;
 }
 
 code {
@@ -103,15 +103,23 @@ input {
     font-size : 18px;
 }
 
-#copyToClipboard {
+.link-container button {
     margin-left   : 1em;
     cursor        : pointer;
     color         : #fff;
     padding       : 0 1em;
-    background    : #6202ee;
     border        : 0;
     border-radius : 3px;
     font-size     : 16px;
+    background    : gray;
+}
+
+.link-container a {
+    display : flex;
+}
+
+#copyToClipboard {
+    background : #6202ee;
 }
 
 #copyToClipboard:hover {

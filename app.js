@@ -44,12 +44,13 @@ const
         await loadScript('https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js');
 
         const
-            wrap =     document.getElementById('wrap'),
-            codeWrap   = document.getElementById('code-input'),
-            editor     = ace.edit('code-input'),
-            urlInput   = document.getElementById('url'),
-            codeEl     = codeWrap.querySelector('.ace_content'),
-            copyButton = document.getElementById('copyToClipboard');
+            wrap          = document.getElementById('wrap'),
+            codeWrap      = document.getElementById('code-input'),
+            editor        = ace.edit('code-input'),
+            urlInput      = document.getElementById('url'),
+            previewLink = document.getElementById('previewLink'),
+            codeEl        = codeWrap.querySelector('.ace_content'),
+            copyButton    = document.getElementById('copyToClipboard');
 
         wrap.style.display = 'flex';
 
@@ -59,7 +60,8 @@ const
         editor.focus();
 
         codeWrap.addEventListener('keyup', () => {
-            urlInput.value = `${location.href.split('?')[0]}?c=${encodeURIComponent(codeEl.innerText)}`;
+            const link     = `${location.href.split('?')[0]}?c=${encodeURIComponent(codeEl.innerText)}`;
+            urlInput.value = previewLink.href = link;
         });
 
         urlInput.addEventListener('click', () => copyToClipboard(urlInput.value));

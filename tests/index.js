@@ -18,6 +18,7 @@ Project.start([
     {
         group : 'Integration tests',
         items : [
+            'comments.t.js',
             'sanity.t.js',
             'line-jumps.t.js',
             'line-waits.t.js'
