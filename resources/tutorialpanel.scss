@@ -112,7 +112,6 @@
         height              : 100%;
         display             : flex;
         flex-direction      : column;
-        //background          : rgba(255, 255, 255, 0.04);
         width               : 3em;
         -webkit-user-select : none;
         padding             : 1em 0.5em;
@@ -144,7 +143,7 @@
             display           : flex;
             counter-increment : line;
             content           : counter(line);
-            color             : rgba(255, 255, 255, 0.4);
+            color             : rgba(255, 255, 255, 0.25);
             cursor            : pointer;
             justify-content   : flex-end;
         }
@@ -246,8 +245,12 @@
         }
     }
 
-    &.b-typing .b-line:not(.b-current-line) {
-        display : none;
+    &.b-typing {
+        pointer-events: none !important;
+
+        .b-line:not(.b-current-line) {
+            display : none;
+        }
     }
 
     code * {
@@ -271,13 +274,22 @@
 
     .b-current-line {
         display : block;
+
+        i.b-icon {
+            display         : inline-flex;
+            padding         : 0;
+            align-items     : center;
+            line-height     : 1em;
+            justify-content : center;
+            margin-left     : 0.5em;
+        }
     }
 
-    .b-current-line *:not(.b-current) {
+    .b-current-line *:not(i):not(.b-current) {
         display : none;
     }
 
-    .b-current {
+    &:not(.b-loading) .b-current {
         opacity      : 1;
         border-right : 1px solid #fff;
     }
@@ -339,7 +351,7 @@
 
         .code-wrap,
         .b-codepanel-result {
-            width : 100%;
+            width : 100% !important;
         }
     }
 }

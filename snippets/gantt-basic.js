@@ -1,10 +1,10 @@
-import Gantt from '../../Gantt/lib/Gantt/view/Gantt.js';
-import ProjectModel from '../../Gantt/lib/Gantt/model/ProjectModel.js';
+import Gantt from '../../bryntum-suite/Gantt/lib/Gantt/view/Gantt.js';
+import ProjectModel from '../../bryntum-suite/Gantt/lib/Gantt/model/ProjectModel.js';
 
 const project = new ProjectModel({
     transport : {
         load : {
-            url : '../../gantt/examples/_datasets/launch-saas.json'
+            url : '../../bryntum-suite/Gantt/examples/_datasets/launch-saas.json'
         }
     }
 });

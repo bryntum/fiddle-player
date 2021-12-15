@@ -8,6 +8,9 @@
 .b-tutorialpanel, .b-tutorialpanel * {
   box-sizing: border-box;
 }
+.b-tutorialpanel code {
+  font-family: "Source Code Pro", monospace;
+}
 .b-tutorialpanel.b-typing .b-line:not(.b-current-line) *,
 .b-tutorialpanel code:not(.b-started) .b-line:not(.b-current-line) * {
   display: none;
@@ -113,7 +116,7 @@
   display: flex;
   counter-increment: line;
   content: counter(line);
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.25);
   cursor: pointer;
   justify-content: flex-end;
 }
@@ -197,6 +200,9 @@
     border: 1px solid #fff;
   }
 }
+.b-tutorialpanel.b-typing {
+  pointer-events: none !important;
+}
 .b-tutorialpanel.b-typing .b-line:not(.b-current-line) {
   display: none;
 }
@@ -219,10 +225,18 @@
 .b-tutorialpanel .b-current-line {
   display: block;
 }
-.b-tutorialpanel .b-current-line *:not(.b-current) {
+.b-tutorialpanel .b-current-line i.b-icon {
+  display: inline-flex;
+  padding: 0;
+  align-items: center;
+  line-height: 1em;
+  justify-content: center;
+  margin-left: 0.5em;
+}
+.b-tutorialpanel .b-current-line *:not(i):not(.b-current) {
   display: none;
 }
-.b-tutorialpanel .b-current {
+.b-tutorialpanel:not(.b-loading) .b-current {
   opacity: 1;
   border-right: 1px solid #fff;
 }
@@ -277,7 +291,7 @@
   }
   .b-tutorialpanel .code-wrap,
 .b-tutorialpanel .b-codepanel-result {
-    width: 100%;
+    width: 100% !important;
   }
 }
 
