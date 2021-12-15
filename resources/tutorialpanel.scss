@@ -245,7 +245,7 @@
         }
     }
 
-    &.b-typing {
+    &.b-typing code {
         pointer-events: none !important;
 
         .b-line:not(.b-current-line) {

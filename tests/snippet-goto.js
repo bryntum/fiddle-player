@@ -1,4 +1,4 @@
-import Grid from '../../../Grid/lib/Grid/view/Grid.js';
+import Grid from '../../../bryntum-suite/Grid/lib/Grid/view/Grid.js';
 
 const grid = new Grid({
     appendTo : targetElement, //->16

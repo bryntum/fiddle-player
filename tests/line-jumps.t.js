@@ -9,7 +9,7 @@ StartTest(t => {
 
         panelElement?.remove();
 
-        document.body.innerHTML = '<tutorial-panel data-keystroke-interval="1" style="display:flex;width:100%;height:100%" id="grid-basic" data-resource-root="../resources" stylesheet="../../../Grid/build/grid.classic-dark.css" fa-path="../../../Core/build/fonts" data-url="snippet-goto.js"></tutorial-panel>';
+        document.body.innerHTML = '<tutorial-panel data-keystroke-interval="1" style="display:flex;width:100%;height:100%" id="grid-basic" data-resource-root="../resources" stylesheet="../../../bryntum-suite/Grid/build/grid.classic-dark.css" fa-path="../../../bryntum-suite/Core/build/fonts" data-url="snippet-goto.js"></tutorial-panel>';
 
         panelElement = document.body.firstElementChild;
 
