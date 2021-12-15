@@ -13,8 +13,8 @@ const grid = new Grid({
             field : 'food',
             flex  : 1
         }
-    ]///->18
-});///->5
+    ]
+});
 ///$2
 // Try uncommenting the line below to load data into the grid
 /// grid.store.data = [{ food : 'Pizza' }, { food : 'Salad' }, { food : 'Burger' }];

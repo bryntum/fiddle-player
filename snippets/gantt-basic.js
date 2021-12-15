@@ -1,7 +1,7 @@
 import Gantt from '../../bryntum-suite/Gantt/lib/Gantt/view/Gantt.js';
 
 const gantt = new Gantt({
-    appendTo     : targetElement,///->27
+    appendTo     : targetElement,//->27
     viewPreset   : 'year',
     columns      : [
         { type : 'name', width : 250 }
@@ -24,4 +24,4 @@ const gantt = new Gantt({
         { from : 2, to : 3 },
         { from : 3, to : 4 }
     ]
-});///->5
+});//->5

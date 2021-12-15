@@ -90,7 +90,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  width: 3em;
+  width: 2.7em;
   -webkit-user-select: none;
   padding: 1em 0.5em;
 }
@@ -200,10 +200,10 @@
     border: 1px solid #fff;
   }
 }
-.b-tutorialpanel.b-typing {
+.b-tutorialpanel.b-typing code {
   pointer-events: none !important;
 }
-.b-tutorialpanel.b-typing .b-line:not(.b-current-line) {
+.b-tutorialpanel.b-typing code .b-line:not(.b-current-line) {
   display: none;
 }
 .b-tutorialpanel code * {
