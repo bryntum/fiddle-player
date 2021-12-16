@@ -122,7 +122,7 @@
 }
 .b-tutorialpanel .b-codepanel-splitter {
   background: #305073;
-  flex: 0 0 0.4em;
+  flex: 0 0 0.2em;
 }
 .b-tutorialpanel .b-code-toolbar {
   display: flex;
@@ -247,18 +247,21 @@
   animation: blink 1.2s infinite linear;
 }
 @media (max-width: 1000px) {
-  .b-tutorialpanel .code-wrap,
-.b-tutorialpanel .b-codepanel-result {
+  .b-tutorialpanel:not(.b-vertical) .code-wrap,
+.b-tutorialpanel:not(.b-vertical) .b-codepanel-result {
     min-height: 10%;
     max-height: 90%;
   }
 }
 @media (min-width: 1000px) {
-  .b-tutorialpanel .code-wrap,
-.b-tutorialpanel .b-codepanel-result {
+  .b-tutorialpanel:not(.b-vertical) .code-wrap,
+.b-tutorialpanel:not(.b-vertical) .b-codepanel-result {
     min-width: 10%;
     max-width: 90%;
   }
+}
+.b-tutorialpanel:not(.b-vertical) {
+  max-width: 100%;
 }
 @media (max-width: 600px) {
   .b-tutorialpanel .b-line-numbers {
@@ -293,6 +296,16 @@
 .b-tutorialpanel .b-codepanel-result {
     width: 100% !important;
   }
+}
+.b-tutorialpanel.b-vertical {
+  flex-direction: column;
+}
+.b-tutorialpanel.b-vertical .b-codepanel-splitter {
+  cursor: ns-resize;
+}
+.b-tutorialpanel.b-vertical .code-wrap,
+.b-tutorialpanel.b-vertical .b-codepanel-result {
+  width: 100% !important;
 }
 
 /*# sourceMappingURL=tutorialpanel.css.map */
