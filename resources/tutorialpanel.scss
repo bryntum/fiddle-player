@@ -157,6 +157,11 @@
         justify-content : center;
         z-index         : 2;
         position        : relative;
+        transition      : filter 0.2s;
+
+        &:hover {
+            filter : brightness(130%);
+        }
 
         .b-splitter-grip {
             display         : flex;
@@ -169,12 +174,6 @@
             height          : 2em;
             width           : 2em;
             border          : 2px solid #06476f;
-
-            &:hover {
-                i {
-                    filter : brightness(180%);
-                }
-            }
 
             i {
                 display         : flex;
