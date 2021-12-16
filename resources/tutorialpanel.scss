@@ -153,6 +153,7 @@
         display         : flex;
         background      : #06476f;
         flex            : 0 0 0.2em;
+        height          : .2em;
         align-items     : center;
         justify-content : center;
         z-index         : 2;
@@ -169,7 +170,6 @@
             border-radius   : 50%;
             align-items     : center;
             justify-content : center;
-            position        : absolute;
             background      : #0d2e4e;
             height          : 2em;
             width           : 2em;
@@ -258,7 +258,7 @@
         // Error message
         &:after {
             position      : absolute;
-            bottom        : 0;
+            bottom        : -40px;
             right         : 0;
             content       : attr(data-error);
             color         : red;

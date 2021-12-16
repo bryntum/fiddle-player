@@ -11,7 +11,7 @@ const gantt = new Gantt({
         name      : 'Go to Mars',
         iconCls   : 'b-icon b-fa-space-shuttle',
         expanded  : true,
-        startDate : '2023-02-01',//->20
+        startDate : '2030-01-01',//->20
         children  : [//->19
             { id : 2, name : 'Enter austronaut academy', percentDone : 85, duration : 90, iconCls : 'b-icon b-fa-user-graduate' },
             { id : 3, name : 'Buy space suit', percentDone : 50, duration : 30, iconCls : 'b-icon b-fa-user-astronaut' },
