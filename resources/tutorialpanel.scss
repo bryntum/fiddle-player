@@ -406,3 +406,20 @@
         width : 100% !important;
     }
 }
+
+.b-js {
+    width           : 2em;
+    height          : 2em;
+    position        : absolute;
+    right           : 1em;
+    top             : 1em;
+    background      : #f6df1c;
+    color           : #000;
+    font-size       : 10px;
+    font-weight     : bold;
+    border-radius   : 3px;
+    display         : flex;
+    align-items     : flex-end;
+    justify-content : end;
+    padding         : 0.2em
+}
