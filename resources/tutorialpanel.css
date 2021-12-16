@@ -121,8 +121,36 @@
   justify-content: flex-end;
 }
 .b-tutorialpanel .b-codepanel-splitter {
-  background: #305073;
+  display: flex;
+  background: #06476f;
   flex: 0 0 0.2em;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+  transition: filter 0.2s;
+}
+.b-tutorialpanel .b-codepanel-splitter:hover {
+  filter: brightness(130%);
+}
+.b-tutorialpanel .b-codepanel-splitter .b-splitter-grip {
+  display: flex;
+  flex-direction: column;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background: #0d2e4e;
+  height: 2em;
+  width: 2em;
+  border: 2px solid #06476f;
+}
+.b-tutorialpanel .b-codepanel-splitter .b-splitter-grip i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #305073;
+  filter: brightness(130%);
 }
 .b-tutorialpanel .b-code-toolbar {
   display: flex;
