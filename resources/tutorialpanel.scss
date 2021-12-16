@@ -150,8 +150,41 @@
     }
 
     .b-codepanel-splitter {
-        background : #305073;
-        flex       : 0 0 0.2em;
+        display         : flex;
+        background      : #06476f;
+        flex            : 0 0 0.2em;
+        align-items     : center;
+        justify-content : center;
+        z-index         : 2;
+        position        : relative;
+
+        .b-splitter-grip {
+            display         : flex;
+            flex-direction  : column;
+            border-radius   : 50%;
+            align-items     : center;
+            justify-content : center;
+            position        : absolute;
+            background      : #0d2e4e;
+            height          : 2em;
+            width           : 2em;
+            border          : 2px solid #06476f;
+
+            &:hover {
+                i {
+                    filter : brightness(180%);
+                }
+            }
+
+            i {
+                display         : flex;
+                align-items     : center;
+                justify-content : center;
+                color           : #305073;
+                filter          : brightness(130%);
+
+            }
+        }
     }
 
     .b-code-toolbar {
