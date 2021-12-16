@@ -151,7 +151,7 @@
 
     .b-codepanel-splitter {
         background : #305073;
-        flex       : 0 0 0.4em;
+        flex       : 0 0 0.2em;
     }
 
     .b-code-toolbar {
@@ -301,17 +301,23 @@
         animation     : blink 1.2s infinite linear;
     }
 
-    .code-wrap,
-    .b-codepanel-result {
-        @media (max-width: 1000px) {
-            min-height : 10%;
-            max-height : 90%;
-        }
+    &:not(.b-vertical) {
+        .code-wrap,
+        .b-codepanel-result {
+            @media (max-width: 1000px) {
+                min-height : 10%;
+                max-height : 90%;
+            }
 
-        @media (min-width: 1000px) {
-            min-width : 10%;
-            max-width : 90%;
+            @media (min-width: 1000px) {
+                min-width : 10%;
+                max-width : 90%;
+            }
         }
+    }
+
+    &:not(.b-vertical) {
+        max-width : 100%;
     }
 
     @media (max-width : 600px) {
@@ -356,3 +362,15 @@
     }
 }
 
+.b-tutorialpanel.b-vertical {
+    flex-direction : column;
+
+    .b-codepanel-splitter {
+        cursor : ns-resize;
+    }
+
+    .code-wrap,
+    .b-codepanel-result {
+        width : 100% !important;
+    }
+}
