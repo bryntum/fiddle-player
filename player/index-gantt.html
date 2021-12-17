@@ -26,15 +26,17 @@
             flex-flow       : row nowrap;
             align-items     : stretch;
             justify-content : center;
+            overflow        : auto;
+            padding         : 4em 0;
         }
 
         .fiddle-section {
             display         : flex;
             padding-top     : 4em;
-            justify-content : center;
             height          : 100%;
             color           : #fff;
-            width           : 1260px;
+            width           : 100%;
+            justify-content : space-evenly;
         }
 
         h5 {
@@ -47,17 +49,30 @@
             line-height : 1.4;
         }
 
-        .fiddle-section > div {
-            padding   : 2em;
-            max-width : 60%;
+        .fiddle-section > * {
+            flex : 1;
+        }
+
+        @media (max-width : 1000px) {
+
+            .fiddle-description {
+                padding : 2em 0;
+            }
+
+            .fiddle-section {
+                flex-direction : column;
+                padding        : 2em;
+            }
+        }
+
+        @media (min-width : 1000px) {
+            .fiddle-section > * {
+                max-width : 40%;
+            }
         }
 
         .fiddle-description {
-            flex : 1.2;
-        }
-
-        .fiddle {
-            flex : 2;
+            flex : 1;
         }
 
         .fiddle-section h5 {
@@ -76,6 +91,8 @@
             overflow         : hidden;
             border-radius    : 10px;
             background-color : #ffffff11;
+            min-height       : 40em;
+            max-height       : 40em;
         }
 
         button {
@@ -101,15 +118,12 @@
             A Gantt encapsulates an enormous amount of complexity. We provide you with a simple, yet highly configurable
             and well tested API so you don't have to worry about the small details.
         </p>
-
         <button>View API Docs</button>
     </div>
-    <div class="fiddle">
-        <tutorial-panel data-hide-toolbar="true" data-orientation="vertical" data-keystroke-interval="1" id="grid-basic"
-                        stylesheet="../../bryntum-suite/Gantt/build/gantt.classic-dark.css"
-                        data-resource-root="../resources" fa-path="../../bryntum-suite/Gantt/build/fonts"
-                        data-url="../snippets/gantt-basic.js"></tutorial-panel>
-    </div>
+    <tutorial-panel data-hide-toolbar="true" data-orientation="vertical" data-keystroke-interval="1" data-interval-randomness="20" data-fit-content="true" id="grid-basic"
+                    stylesheet="../../bryntum-suite/Gantt/build/gantt.classic-dark.css"
+                    data-resource-root="../resources" fa-path="../../bryntum-suite/Gantt/build/fonts"
+                    data-url="../snippets/gantt-basic.js"></tutorial-panel>
 </section>
 <script type="module" src="../lib/TutorialPanel.js"></script>
 </body>

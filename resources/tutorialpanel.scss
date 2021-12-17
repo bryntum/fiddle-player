@@ -20,24 +20,29 @@
     }
 
     .code-wrap {
-        position       : relative;
-        width          : 50%;
-        height         : 100%;
-        display        : flex;
-        flex-direction : column;
-        overflow       : hidden;
+        position         : relative;
+        width            : 50%;
+        flex             : 1 1 50%;
+        display          : flex;
+        flex-direction   : column;
+        overflow         : hidden;
         background-color : #0d2e4e;
     }
 
     pre {
-        color       : #fff;
-        margin      : 0;
-        height      : 100%;
-        overflow    : auto;
-        display     : flex;
-        line-height : 1.5em;
-        font-size   : 14px;
-        cursor      : pointer;
+        color           : #fff;
+        margin          : 0;
+        height          : 100%;
+        overflow        : auto;
+        display         : flex;
+        line-height     : 1.5em;
+        font-size       : 14px;
+        cursor          : pointer;
+        scrollbar-width : none;
+
+        &::-webkit-scrollbar {
+            display: none;  /* Safari and Chrome */
+        }
 
         .b-line:not(:first-child) {
             display : none;
@@ -153,7 +158,7 @@
         display         : flex;
         background      : #06476f;
         flex            : 0 0 0.2em;
-        height          : .2em;
+        height          : 3px;
         align-items     : center;
         justify-content : center;
         z-index         : 2;
@@ -173,7 +178,7 @@
             background      : #0d2e4e;
             height          : 2em;
             width           : 2em;
-            border          : 2px solid #06476f;
+            border          : 3px solid #06476f;
 
             i {
                 display         : flex;
@@ -242,7 +247,7 @@
 
     .b-codepanel-result {
         display          : flex;
-        height           : 100%;
+        flex             : 1 1 50%;
         width            : 50%;
         padding          : 3em;
         background-color : #000;
@@ -421,5 +426,6 @@
     display         : flex;
     align-items     : flex-end;
     justify-content : end;
-    padding         : 0.2em
+    padding         : 0.2em;
+    z-index         : 2;
 }
