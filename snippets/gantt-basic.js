@@ -1,8 +1,9 @@
 import Gantt from '../../bryntum-suite/Gantt/lib/Gantt/view/Gantt.js';
 
 const gantt = new Gantt({
-    appendTo     : targetElement,//->25
+    appendTo     : targetElement,//->26
     viewPreset   : 'year',
+    tick         : 20,
     columns      : [
         { type : 'name', width : 250 }
     ],
@@ -12,7 +13,7 @@ const gantt = new Gantt({
         iconCls   : 'b-fa b-fa-space-shuttle',
         expanded  : true,
         startDate : '2030-01-01',//->20
-        children  : [//->19
+        children  : [//->21
             { id : 2, name : 'Astronaut academy', percentDone : 85, duration : 90, iconCls : 'b-fa b-fa-user-graduate' },
             { id : 3, name : 'Buy space suit', percentDone : 50, duration : 30, iconCls : 'b-fa b-fa-user-astronaut' },
             { id : 4, name : 'Wait for Elon´s call', duration : 100, iconCls : 'b-fa b-fa-phone' }
@@ -22,4 +23,4 @@ const gantt = new Gantt({
         { from : 2, to : 3 },
         { from : 3, to : 4 }
     ]
-});//->5
+});
