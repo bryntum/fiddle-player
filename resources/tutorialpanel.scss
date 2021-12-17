@@ -1,8 +1,8 @@
 .b-tutorialpanel {
-    display          : flex;
-    flex             : 1;
-    height           : 100%;
-    overflow         : hidden;
+    display     : flex;
+    flex        : 1;
+    overflow    : hidden;
+    font-family : Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
 
     &, * {
         box-sizing : border-box;
@@ -427,5 +427,6 @@
     align-items     : flex-end;
     justify-content : end;
     padding         : 0.2em;
+    line-height     : normal;
     z-index         : 2;
 }
