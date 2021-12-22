@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Tutorial Panel</title>
+    <style>
+        html, body {
+            height   : 100%;
+            overflow : hidden;
+        }
+
+        body {
+            font-family : Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+            margin      : 0;
+            display     : flex;
+            flex-flow   : row nowrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        tutorial-panel {
+            flex       : 0 0 100%;
+            height : 400px;
+            max-width  : 800px;
+            display    : flex;
+            overflow   : hidden;
+        }
+    </style>
+</head>
+<body>
+<tutorial-panel
+        data-hide-toolbar="true"
+        data-lazy-load-resources="tutorial-panel"
+        data-orientation="vertical"
+        data-keystroke-interval="1"
+        data-interval-randomness="20"
+        data-fit-content="true"
+        stylesheet="../../bryntum-suite/gantt/build/gantt.classic-dark.css"
+        data-resource-root="../resources"
+        fa-path="../../bryntum-suite/Gantt/build/fonts"
+        data-url="../snippets/gantt-basic.js"
+        data-toggle-play-on-click="false"
+        data-inline-css="* { transition:none !important; }"
+>
+</tutorial-panel>
+<script async type="module" src="../lib/TutorialPanel.js"></script>
+</body>
+
+</html>
