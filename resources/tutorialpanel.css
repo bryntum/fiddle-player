@@ -341,12 +341,29 @@
   width: 100% !important;
 }
 
-.b-js {
+.b-top-toolbar {
+  padding: 0.7em;
+  background: #0d234e;
+  display: flex;
+  align-items: center;
+}
+.b-top-toolbar .b-fa-expand {
+  margin-left: auto;
+  color: #bcddf7;
+  opacity: 0.4;
+  transition: opacity 0.3s;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 20px;
+  height: 20px;
+  width: 20px;
+}
+.b-top-toolbar .b-fa-expand:hover {
+  opacity: 1;
+}
+.b-top-toolbar .b-js {
   width: 2em;
   height: 2em;
-  position: absolute;
-  right: 1em;
-  top: 1em;
   background: #f6df1c;
   color: #000;
   font-size: 10px;
