@@ -17,10 +17,6 @@ body {
     padding         : 3em 0 0 0;
 }
 
-body * {
-    font-family : Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
-}
-
 header {
     display        : flex;
     flex-direction : column;

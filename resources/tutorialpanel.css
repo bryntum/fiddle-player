@@ -149,6 +149,7 @@
   height: 2em;
   width: 2em;
   border: 3px solid #06476f;
+  flex-shrink: 0;
 }
 .b-tutorialpanel .b-codepanel-splitter .b-splitter-grip i {
   display: flex;
@@ -310,12 +311,16 @@
 
 @media (min-width: 1000px) {
   .code-wrap,
-.b-codepanel-result {
+  .b-codepanel-result {
     height: 100%;
   }
-
-  .b-codepanel-splitter {
+  .b-tutorialpanel .b-codepanel-splitter {
     cursor: ew-resize;
+    height: 100%;
+    width: 6px;
+  }
+  .b-tutorialpanel .b-codepanel-splitter .b-splitter-grip i {
+    transform: rotateZ(90deg);
   }
 }
 @media (max-width: 1000px) {
