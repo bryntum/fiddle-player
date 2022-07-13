@@ -317,7 +317,7 @@
   .b-tutorialpanel .b-codepanel-splitter {
     cursor: ew-resize;
     height: 100%;
-    width: 6px;
+    width: 3px;
   }
   .b-tutorialpanel .b-codepanel-splitter .b-splitter-grip i {
     transform: rotateZ(90deg);
