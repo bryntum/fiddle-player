@@ -23,7 +23,7 @@ const grid = new Grid(gridConfig);  //->17
 ```
 
 Full example:
-```
+```javascript
 import { Grid } from 'https://bryntum.com/dist/grid/build/grid.module.js';
 
 const grid = new Grid({
