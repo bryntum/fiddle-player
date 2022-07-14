@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .b-tutorialpanel {
   display: flex;
   flex: 1;
@@ -36,8 +35,7 @@
   scrollbar-width: none;
 }
 .b-tutorialpanel pre::-webkit-scrollbar {
-  display: none;
-  /* Safari and Chrome */
+  display: none; /* Safari and Chrome */
 }
 .b-tutorialpanel pre .b-line:not(:first-child) {
   display: none;
@@ -200,7 +198,7 @@
   margin: 0;
 }
 .b-tutorialpanel.b-typing .b-fa-play:before {
-  content: "";
+  content: "\f04c";
 }
 .b-tutorialpanel .b-codepanel-result {
   display: flex;
@@ -311,13 +309,13 @@
 
 @media (min-width: 1000px) {
   .code-wrap,
-  .b-codepanel-result {
+.b-codepanel-result {
     height: 100%;
   }
   .b-tutorialpanel .b-codepanel-splitter {
     cursor: ew-resize;
     height: 100%;
-    width: 3px;
+    width: 6px;
   }
   .b-tutorialpanel .b-codepanel-splitter .b-splitter-grip i {
     transform: rotateZ(90deg);

@@ -1,4 +1,4 @@
-import Gantt from '../../bryntum-suite/Gantt/lib/Gantt/view/Gantt.js';
+import { Gantt } from 'https://bryntum.com/dist/gantt/build/gantt.module.js';
 
 const gantt = new Gantt({
     appendTo     : targetElement,//->26
