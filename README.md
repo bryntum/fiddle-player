@@ -1,11 +1,11 @@
 # fiddle-player
-A simple JS fiddle tool which simulates typing code into a CODE editor. As the code is typed, it is also evaluated
-which makes it a great way to teach someone how to use the DOM or visualise the results of a UI library. 
+A JS fiddle tool that simulates code being typed into an editor, while showing the results of evaluating the code as it goes. 
+It's a great way to teach someone how to use the DOM, or demonstrate a UI library.
 
 # Meta commands
-You can write a few different magic commands (prefixed by triple slash `///`) in the code to jump between lines, or pause at a certain line to let the user
-read before continuing. `window.targetElement` points to the DOM result panel element where you can render any
-HTML. 
+You can write a few different magic commands (prefixed by triple slash `///`) in the code to jump between lines, or pause at a 
+certain line to let the user read before continuing. `window.targetElement` points to the DOM result panel element where you can 
+render any HTML. 
 
 Add a pause before continuing:
 ```
@@ -17,8 +17,13 @@ Add a commented line with a checkbox for users to uncomment:
 /// document.body.style="background:#000";
 ```
 
-Full example:
+Skip ahead to a specific line using `//->{lineNumber}`:
+```javascript
+const grid = new Grid(gridConfig);  //->17
 ```
+
+Full example:
+```javascript
 import { Grid } from 'https://bryntum.com/dist/grid/build/grid.module.js';
 
 const grid = new Grid({

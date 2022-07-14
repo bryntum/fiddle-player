@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .b-tutorialpanel {
   display: flex;
   flex: 1;
@@ -36,8 +35,7 @@
   scrollbar-width: none;
 }
 .b-tutorialpanel pre::-webkit-scrollbar {
-  display: none;
-  /* Safari and Chrome */
+  display: none; /* Safari and Chrome */
 }
 .b-tutorialpanel pre .b-line:not(:first-child) {
   display: none;
@@ -149,6 +147,7 @@
   height: 2em;
   width: 2em;
   border: 3px solid #06476f;
+  flex-shrink: 0;
 }
 .b-tutorialpanel .b-codepanel-splitter .b-splitter-grip i {
   display: flex;
@@ -199,7 +198,7 @@
   margin: 0;
 }
 .b-tutorialpanel.b-typing .b-fa-play:before {
-  content: "";
+  content: "\f04c";
 }
 .b-tutorialpanel .b-codepanel-result {
   display: flex;
@@ -313,9 +312,13 @@
 .b-codepanel-result {
     height: 100%;
   }
-
-  .b-codepanel-splitter {
+  .b-tutorialpanel .b-codepanel-splitter {
     cursor: ew-resize;
+    height: 100%;
+    width: 6px;
+  }
+  .b-tutorialpanel .b-codepanel-splitter .b-splitter-grip i {
+    transform: rotateZ(90deg);
   }
 }
 @media (max-width: 1000px) {

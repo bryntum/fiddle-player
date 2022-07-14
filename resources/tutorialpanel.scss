@@ -179,6 +179,7 @@
             height          : 2em;
             width           : 2em;
             border          : 3px solid #06476f;
+            flex-shrink     : 0;
 
             i {
                 display         : flex;
@@ -379,8 +380,14 @@
         height : 100%;
     }
 
-    .b-codepanel-splitter {
+    .b-tutorialpanel .b-codepanel-splitter {
         cursor : ew-resize;
+        height: 100%;
+        width: 6px;
+    }
+
+    .b-tutorialpanel .b-codepanel-splitter .b-splitter-grip i {
+        transform: rotateZ(90deg);
     }
 }
 
