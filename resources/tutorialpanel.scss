@@ -380,14 +380,16 @@
         height : 100%;
     }
 
-    .b-tutorialpanel .b-codepanel-splitter {
-        cursor : ew-resize;
-        height: 100%;
-        width: 6px;
-    }
-
-    .b-tutorialpanel .b-codepanel-splitter .b-splitter-grip i {
-        transform: rotateZ(90deg);
+    .b-tutorialpanel:not(.b-vertical) {
+        .b-codepanel-splitter {
+            cursor : ew-resize;
+            height: 100%;
+            width: 6px;
+            
+            .b-splitter-grip i {
+                transform: rotateZ(90deg);
+            }
+        }
     }
 }
 
