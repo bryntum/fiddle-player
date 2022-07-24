@@ -65,6 +65,11 @@
 .b-tutorialpanel pre code .b-line * {
   cursor: text;
 }
+.b-tutorialpanel pre code:not(.b-started) .b-line:first-child:not(.b-line-visible)::before {
+  content: attr(data-placeholder);
+  display: inline-block;
+  opacity: 0.4;
+}
 .b-tutorialpanel pre .comment,
 .b-tutorialpanel pre .block-comment,
 .b-tutorialpanel pre .comment .keyword,
@@ -115,7 +120,7 @@
 .b-tutorialpanel .b-line-numbers .b-line {
   height: 1.5em;
 }
-.b-tutorialpanel .b-line-numbers .b-line:not(.hint):after {
+.b-tutorialpanel .b-line-numbers .b-line:not(.b-hint):after {
   display: flex;
   counter-increment: line;
   content: counter(line);
@@ -226,10 +231,19 @@
 }
 @keyframes blink {
   0% {
-    border: 0;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
   }
   100% {
-    border: 1px solid #fff;
+    opacity: 0;
   }
 }
 .b-tutorialpanel.b-typing code {
@@ -245,7 +259,7 @@
   opacity: 0.8;
 }
 .b-tutorialpanel code.b-idle:not(.b-started) .b-line:first-child:after {
-  display: block;
+  display: inline-block;
   position: relative;
   content: " ";
   border: 1px solid #fff;

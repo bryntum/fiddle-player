@@ -80,6 +80,14 @@
                     cursor : text;
                 }
             }
+
+            &:not(.b-started) {
+                .b-line:first-child:not(.b-line-visible)::before {
+                    content: attr(data-placeholder);
+                    display: inline-block;
+                    opacity: 0.4;
+                }
+            }
         }
 
         .comment,
@@ -144,7 +152,7 @@
             height : 1.5em;
         }
 
-        .b-line:not(.hint):after {
+        .b-line:not(.b-hint):after {
             display           : flex;
             counter-increment : line;
             content           : counter(line);
@@ -276,10 +284,19 @@
 
     @keyframes blink {
         0% {
-            border : 0;
+            opacity : 0;
+        }
+        5% {
+            opacity : 1;
+        }
+        50% {
+            opacity : 1;
+        }
+        55% {
+            opacity : 0;
         }
         100% {
-            border : 1px solid #fff;
+            opacity : 0;
         }
     }
 
@@ -300,7 +317,7 @@
     }
 
     code.b-idle:not(.b-started) .b-line:first-child:after {
-        display   : block;
+        display   : inline-block;
         position  : relative;
         content   : ' ';
         border    : 1px solid #fff;
