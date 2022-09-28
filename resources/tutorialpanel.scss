@@ -1,8 +1,9 @@
 .b-tutorialpanel {
-    display     : flex;
-    flex        : 1;
-    overflow    : hidden;
-    font-family : Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    display       : flex;
+    flex          : 1;
+    overflow      : hidden;
+    font-family   : Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    border-radius : 5px;
 
     &, * {
         box-sizing : border-box;
@@ -149,20 +150,9 @@
         transition      : border .3s, background .3s;
 
         .b-splitter-grip {
-            display         : flex;
-            flex-direction  : column;
-            border-radius   : 50%;
-            align-items     : center;
-            justify-content : center;
-            height          : 3em;
-            width           : 3em;
-
-            i {
-                display         : flex;
-                align-items     : center;
-                justify-content : center;
-                padding         : 1em;
-            }
+            border-radius : 50%;
+            flex-shrink   : 0;
+            background    : #fff;
         }
     }
 
@@ -375,11 +365,6 @@
         cursor    : ns-resize;
     }
 
-    .b-fa-arrows-alt-h {
-
-        transform : rotate(90deg);
-    }
-
     .code-wrap,
     .b-codepanel-result {
         width : 100% !important;
@@ -392,17 +377,16 @@
     align-items : center;
     position    : relative;
 
-    .b-fa-expand {
+    svg[data-reference="toggleFullscreen"] {
         margin-left : auto;
-        color       : #bcddf7;
-        opacity     : 0.4;
+        stroke      : none;
+        fill        : #aaa;
+        opacity     : 0.6;
         transition  : opacity 0.3s;
         cursor      : pointer;
-        font-size   : 18px;
-        line-height : 20px;
         height      : 20px;
         width       : 20px;
-        text-align  : right;
+        transform   : scale(1.5);
 
         &:hover {
             opacity : 1;
@@ -500,17 +484,20 @@ pre {
 }
 
 .b-splitter-grip {
-    background : #fff;
-    border     : 1px solid #eee;
-    transition : border .4s;
-    color      : #eee;
+    border         : 1px solid #eee;
+    stroke         : #dfdfdf;
+    stroke-linecap : round;
+    fill           : none;
+    transform      : rotate(90deg) scale(1.5);
+    transform      : scale(1.5);
+
+    .b-tutorialpanel:not(.b-vertical) & {
+        transform : rotate(90deg) scale(1.5);
+    }
 
     &:hover {
-        border : 3px solid #eee;
-
-        i {
-            filter : brightness(95%);
-        }
+        border : 1px solid #d0d0d0;
+        stroke : #d0d0d0;
     }
 }
 
@@ -589,8 +576,8 @@ pre {
         background : #0d2e4e;
         border     : 3px solid #06476f;
 
-        i {
-            color : #06476f;
+        svg {
+            fill : #06476f;
 
             &:hover {
                 filter : brightness(110%);
