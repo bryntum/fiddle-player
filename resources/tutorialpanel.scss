@@ -351,9 +351,10 @@
     flex-direction : column;
 
     .b-codepanel-splitter {
-        height : 5px;
-        width  : 100%;
-        cursor : ns-resize;
+        height    : 5px;
+        width     : 100%;
+        max-width : 100%;
+        cursor    : ns-resize;
     }
 
     .b-fa-arrows-alt-h {
@@ -410,6 +411,12 @@
 // region Light Theme
 .code-wrap {
     background : #fff;
+}
+
+.b-tutorialpanel.b-vertical .b-codepanel-splitter {
+    height     : 0;
+    max-height : 0;
+    width      : 100%;
 }
 
 pre {
