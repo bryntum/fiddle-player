@@ -161,7 +161,6 @@
                 display         : flex;
                 align-items     : center;
                 justify-content : center;
-                filter          : brightness(130%);
                 padding         : 1em;
             }
         }
@@ -504,6 +503,7 @@ pre {
     background : #fff;
     border     : 1px solid #eee;
     transition : border .4s;
+    color      : #eee;
 
     &:hover {
         border : 3px solid #eee;
@@ -511,10 +511,6 @@ pre {
         i {
             filter : brightness(95%);
         }
-    }
-
-    i {
-        color : #aaa;
     }
 }
 
@@ -594,7 +590,11 @@ pre {
         border     : 3px solid #06476f;
 
         i {
-            color : #305073;
+            color : #06476f;
+
+            &:hover {
+                filter : brightness(110%);
+            }
         }
     }
 
