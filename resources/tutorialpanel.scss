@@ -81,6 +81,25 @@
         }
     }
 
+    .b-fiddle-title {
+        position                : absolute;
+        display                 : flex;
+        left                    : 4em;
+        bottom                  : -1px;
+        align-items             : center;
+        height                  : 80%;
+        align-self              : end;
+        padding                 : 0.5em 1em;
+        border                  : 1px solid;
+        border-color            : inherit;
+        border-bottom-color     : #fff;
+        background              : #fff;
+        border-top-left-radius  : 4px;
+        border-top-right-radius : 4px;
+        font-size               : .8em;
+        color                   : #666;
+    }
+
     .b-line-numbers {
         counter-reset       : line 0;
         height              : 100%;
@@ -372,6 +391,7 @@
     padding     : 0.7em;
     display     : flex;
     align-items : center;
+    position    : relative;
 
     .b-fa-expand {
         margin-left : auto;
@@ -455,7 +475,8 @@ pre {
 
 .b-top-toolbar {
     background    : #fff;
-    border-bottom : 1px solid #eee;
+    border-bottom : 1px solid;
+    border-color  : #dfdfdf;
 
     .b-fa {
         color : #888;
@@ -463,7 +484,8 @@ pre {
 }
 
 .b-line-numbers {
-    background : #fafafa;
+    // TODO make it stretch to be able to apply bg color
+    //background : #fafafa;
 
     .b-line:not(.hint):after {
         color : #aaa;
