@@ -152,7 +152,6 @@
         .b-splitter-grip {
             border-radius : 50%;
             flex-shrink   : 0;
-            background    : #fff;
         }
     }
 
@@ -490,21 +489,23 @@ pre {
     fill           : none;
     transform      : rotate(90deg) scale(1.5);
     transform      : scale(1.5);
+    background     : #fff;
+    transition     : all .4s;
 
     .b-tutorialpanel:not(.b-vertical) & {
         transform : rotate(90deg) scale(1.5);
     }
 
     &:hover {
-        border : 1px solid #d0d0d0;
-        stroke : #d0d0d0;
+        border       : 1px solid #d0d0d0;
+        stroke       : #d0d0d0;
+        stroke-width : 2;
     }
 }
 
 .b-codepanel-result {
     background-color : #fff;
     background-image : linear-gradient(to right, #eee 1px, transparent 1px), linear-gradient(to bottom, #eee 1px, transparent 1px);
-    box-shadow       : inset 0 0 .5em #ddd;
 
     > * {
         box-shadow : 0 3px 10px #ddd;
@@ -574,14 +575,12 @@ pre {
 
     .b-splitter-grip {
         background : #0d2e4e;
-        border     : 3px solid #06476f;
+        stroke     : #0969a5;
+        border     : 1px solid #06476f;
 
-        svg {
-            fill : #06476f;
-
-            &:hover {
-                filter : brightness(110%);
-            }
+        &:hover {
+            border : 1px solid #06476f;
+            filter : brightness(130%);
         }
     }
 
