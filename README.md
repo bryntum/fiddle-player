@@ -1,6 +1,6 @@
 # fiddle-player
 A simple JS fiddle tool which simulates typing code into a CODE editor. As the code is typed, it is also evaluated
-which makes it a great way to teach someone how to use the DOM or visualise the results of a UI library. 
+which makes it a great way to teach someone how to use the DOM or visualise the results of a UI library. We use this at Bryntum to show off our UI widgets as seen on our [Gantt chart page](https://www.bryntum.com/products/gantt/).
 
 # Meta commands
 You can write a few different magic commands (prefixed by triple slash `///`) in the code to jump between lines, or pause at a certain line to let the user
