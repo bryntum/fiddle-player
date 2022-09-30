@@ -3,7 +3,7 @@
     flex          : 1;
     overflow      : hidden;
     font-family   : Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
-    border-radius : 5px;
+    border-radius : 10px;
 
     &, * {
         box-sizing : border-box;
@@ -225,11 +225,11 @@
     }
 
     @keyframes blink {
-        0% {
-            border : 0;
+        from {
+            visibility : visible;
         }
-        100% {
-            border : 1px solid #fff;
+        to {
+            visibility : hidden;
         }
     }
 
@@ -249,15 +249,15 @@
         opacity : 0.8;
     }
 
-    code.b-idle:not(.b-started) .b-line:first-child:after {
-        display   : block;
-        position  : relative;
-        content   : ' ';
-        border    : 1px solid #fff;
-        width     : 0.6em;
-        height    : 1em;
-        top       : 0.2em;
-        animation : blink 1.2s infinite linear;
+    code.b-idle:not(.b-started):after {
+        display     : block;
+        position    : relative;
+        content     : ' ';
+        border-left : 1px solid #000;
+        width       : 0.6em;
+        height      : 1.3em;
+        top         : 0.2em;
+        animation   : blink 1.2s steps(2, start) infinite;
     }
 
     .b-current-line {
@@ -279,14 +279,13 @@
 
     &:not(.b-loading) .b-current {
         opacity      : 1;
-        border-right : 1px solid #fff;
     }
 
     .b-idle .b-current {
         border-left   : 0 !important;
         border-bottom : 0 !important;
         border-top    : 0 !important;
-        animation     : blink 1.2s infinite linear;
+        animation     : blink 1.2s steps(2, start) infinite;
     }
 
     &:not(.b-vertical) {
@@ -415,10 +414,20 @@
     background : #fff;
 }
 
-.b-tutorialpanel.b-vertical .b-codepanel-splitter {
-    height     : 0;
-    max-height : 0;
-    width      : 100%;
+code.b-idle:not(.b-started) .b-line:first-child:after {
+    border : 1px solid #000;
+}
+
+.b-tutorialpanel {
+    &:not(.b-loading) .b-current {
+        border-right : 1px solid #000;
+    }
+
+    &.b-vertical .b-codepanel-splitter {
+        height     : 0;
+        max-height : 0;
+        width      : 100%;
+    }
 }
 
 pre {
@@ -522,12 +531,20 @@ pre {
 
 // region Dark Theme
 .b-dark {
+    code.b-idle:not(.b-started):after {
+        border-left : 1px solid #fff;
+    }
+
     .b-line-numbers {
         background : #00000022;
     }
 
     .code-wrap {
         background-color : #0d2e4e;
+    }
+
+    &:not(.b-loading) .b-current {
+        border-right : 1px solid #fff;
     }
 
     pre {
