@@ -45,9 +45,3 @@ Use it to send code snippets to coworkers or in the API documentation for your J
 # Live demo 
 
 [Click here](https://lmctfy.net/player) for a live demo.
-
-# Let Me Code That For You
-
-[Let Me Code That For You](https://lmctfy.net/) is also powered by the code in this repo. We hope you find good use for
-it or at least have fun typing JS snippets :)
-
