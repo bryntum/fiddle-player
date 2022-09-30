@@ -9,7 +9,11 @@ const gantt = new Gantt({
     ],
     tasks        : [{
         id        : 1,
-        name      : 'Go to Mars',
+        name      : `Go to 
+        
+        asfsa
+        
+        Mars  `,
         iconCls   : 'b-fa b-fa-space-shuttle',
         expanded  : true,
         startDate : '2030-01-01',
