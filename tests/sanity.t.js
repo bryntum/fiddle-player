@@ -25,6 +25,25 @@ StartTest(t => {
         t.selectorCountIs('tutorial-panel -> .b-line-numbers .b-line-visible', 1, 'Only first line visible');
     });
 
+    t.iit('Should Resize in splitter drag', async t => {
+        await t.waitForSelector('tutorial-panel -> .b-tutorialpanel .code-wrap');
+        await t.waitForSelector('tutorial-panel -> .b-tutorialpanel .b-codepanel-result');
+
+        const
+            codeWrap = t.query('tutorial-panel -> .b-tutorialpanel .code-wrap')[0],
+            splitter = t.query('tutorial-panel -> .b-tutorialpanel .b-codepanel-splitter')[0],
+            resultPanel = t.query('tutorial-panel -> .b-tutorialpanel .b-codepanel-result')[0];
+
+        const
+            codeWrapWidth = codeWrap.getBoundingClientRect().width,
+            resultPanelWidth = resultPanel.getBoundingClientRect().width;
+
+        await t.dragBy(splitter, [50, 0]);
+
+        t.is(codeWrap.getBoundingClientRect().width, codeWrapWidth + 50);
+        t.is(resultPanel.getBoundingClientRect().width, resultPanelWidth - 50);
+    });
+
     t.it('Should play to finish', async t => {
         await t.click('tutorial-panel -> .b-tutorialpanel .b-fa-play');
         await t.waitForSelector('tutorial-panel -> .b-tutorialpanel.b-typing code.b-started');
