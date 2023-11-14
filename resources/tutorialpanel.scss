@@ -2,16 +2,30 @@
     display       : flex;
     flex          : 1;
     overflow      : hidden;
-    font-family   : Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
     border-radius : 10px;
 
     &:not(.constructed) * {
         transition : none !important;
     }
 
-    &.constructed * {
-        transition-property : border, border-bottom-color, color, background-color, background-image;
-        transition-duration : .3s;
+    &:not(.b-dark) {
+        .b-codepanel-result:before{
+            opacity: .15;
+        }
+    }
+
+    &.constructed {
+        &,
+        .code-wrap,
+        .b-codepanel-result,
+        .b-codepanel-result:before,
+        .b-top-toolbar,
+        .b-splitter-grip,
+        .b-top-toolbar > *,
+        code span {
+            transition-property : border, border-bottom-color, color, background-color, stroke, fill, filter, background, opacity;
+            transition-duration : .4s;
+        }
     }
 
     &, * {
@@ -154,9 +168,8 @@
         justify-content : center;
         z-index         : 2;
         position        : relative;
-        transition      : filter 0.2s;
         height          : 100%;
-        transition      : border .3s, background .3s;
+        transition      : filter 0.3s, border .3s, background .3s;
 
         .b-splitter-grip {
             border-radius : 50%;
@@ -248,10 +261,6 @@
         .b-line:not(.b-current-line) {
             display : none;
         }
-    }
-
-    code * {
-        transition : opacity 0.3s, color 0.2s;
     }
 
     code.b-typing > :not(.b-current) {
@@ -359,7 +368,7 @@
 }
 
 .b-fa-arrows-alt-h {
-    transition : transform .4s;
+    transition : transform .3s;
 }
 
 .b-tutorialpanel.b-vertical {
@@ -488,8 +497,6 @@ pre {
 }
 
 .b-line-numbers {
-    // TODO make it stretch to be able to apply bg color
-    //background : #fafafa;
 
     .b-line:not(.hint):after {
         color : #aaa;
@@ -512,7 +519,6 @@ pre {
     transform      : rotate(90deg) scale(1.5);
     transform      : scale(1.5);
     background     : #fff;
-    transition     : border .3s, background .3s, stroke .3s;
 
     .b-tutorialpanel:not(.b-vertical) & {
         transform : rotate(90deg) scale(1.5);
@@ -527,7 +533,16 @@ pre {
 
 .b-codepanel-result {
     background-color : #fff;
-    background-image : linear-gradient(to right, #eee 1px, transparent 1px), linear-gradient(to bottom, #eee 1px, transparent 1px);
+
+    &:before {
+        content    : "";
+        position   : absolute;
+        top        : 0;
+        right      : 0;
+        bottom     : 0;
+        left       : 0;
+        background : conic-gradient(from 90deg at 1px 1px, transparent 90deg, #222 0) 0 0/16px 16px;
+    }
 
     > * {
         box-shadow : 0 3px 10px #ddd;
@@ -546,10 +561,6 @@ pre {
 .b-dark {
     code.b-idle:not(.b-started):after {
         border-left : 1px solid #fff;
-    }
-
-    .b-line-numbers {
-        background : #00000022;
     }
 
     .code-wrap {
@@ -630,7 +641,6 @@ pre {
 
     .b-codepanel-result {
         background-color : #000;
-        background-image : url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoBAMAAAB+0KVeAAAAHlBMVEUAAABkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGSH0mEbAAAACnRSTlMAzDPDPPPYnGMw2CgMzQAAAChJREFUKM9jgAPOAgZMwGIwKkhXQSUY0BCCMxkEYUAsEM4cjI4fwYIAf2QMNbUsZjcAAAAASUVORK5CYII=');
         box-shadow       : none;
 
         > * {
