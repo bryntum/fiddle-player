@@ -1,5 +1,5 @@
 .b-gantt {
-    --task-border-radius : 5px;
+    --task-border-radius : 10px;
 
     .b-grid-row {
         border-bottom : 0;
@@ -81,10 +81,6 @@
 
 .b-tutorialpanel:not(.b-dark) {
     .b-horizontaltimeaxis {
-        .b-sch-header-row-0 .b-sch-header-timeaxis-cell {
-            color : #1f88e5;
-        }
-
         .b-sch-header-row-1,
         .b-sch-header-row-2 {
             .b-sch-header-timeaxis-cell:hover {
