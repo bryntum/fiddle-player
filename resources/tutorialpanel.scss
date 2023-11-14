@@ -26,6 +26,10 @@
             transition-property : border, border-bottom-color, color, background-color, stroke, fill, filter, background, opacity;
             transition-duration : .4s;
         }
+
+        &.b-typing .b-widget *:not(.b-column-line,.b-column-line-major) {
+            transition-duration: .5s;
+        }
     }
 
     &, * {
