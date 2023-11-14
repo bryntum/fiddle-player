@@ -30,6 +30,15 @@
         &.b-typing .b-widget *:not(.b-column-line,.b-column-line-major) {
             transition-duration: .5s;
         }
+
+        &.b-theme-changing .b-codepanel-result > .b-widget {
+            transition-property: all !important;
+            transition-duration: .5s !important;
+
+            * {
+                transition-duration: .5s !important;
+            }
+        }
     }
 
     &, * {

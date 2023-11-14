@@ -13,13 +13,13 @@ const gantt = new Gantt({
         startDate : '2030-03-01',
         expanded  : true,
         children  : [//->19
-            { id : 2, name : 'Astronaut academy', percentDone : 85, duration : 300, iconCls : 'b-fa b-fa-user-graduate' },
-            { id : 3, name : 'Make space suit', percentDone : 50, duration : 280, iconCls : 'b-fa b-fa-user-astronaut' },
-            { id : 4, name : 'Wait for Elon´s call', duration : 0, iconCls : 'b-fa b-fa-phone' }
+            { id : 2, name : 'Astronaut academy', percentDone : 50, duration : 300 },
+            { id : 3, name : 'Make space suit', percentDone : 50, duration : 300},
+            { id : 4, name : 'Wait for Elon´s call', duration : 0, eventColor : 'orange' }
         ],
     }],
     dependencies : [
         { from : 2, to : 3 },
-        { from : 3, to : 4, lag : 20 }
+        { from : 3, to : 4, lag : 30 }
     ]
 });
