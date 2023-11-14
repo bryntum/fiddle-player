@@ -8,8 +8,9 @@
     &:not(.constructed) * {
         transition : none !important;
     }
+
     &.constructed * {
-        transition-property : border, border-bottom-color, color, background-color;
+        transition-property : border, border-bottom-color, color, background-color, background-image;
         transition-duration : .3s;
     }
 
@@ -378,10 +379,10 @@
 }
 
 .b-top-toolbar {
-    padding     : 1em;
-    display     : flex;
-    align-items : center;
-    position    : relative;
+    padding       : 1em;
+    display       : flex;
+    align-items   : center;
+    position      : relative;
 
     background    : #fff;
     border-bottom : 1px solid;
@@ -405,6 +406,11 @@
 
         &:hover {
             opacity : 1;
+        }
+
+        &.pressed {
+            opacity : 0.9;
+            fill    : #333;
         }
     }
 
@@ -506,7 +512,7 @@ pre {
     transform      : rotate(90deg) scale(1.5);
     transform      : scale(1.5);
     background     : #fff;
-    transition     : border .3s, background .3s,stroke .3s;
+    transition     : border .3s, background .3s, stroke .3s;
 
     .b-tutorialpanel:not(.b-vertical) & {
         transform : rotate(90deg) scale(1.5);
@@ -552,6 +558,10 @@ pre {
 
     &:not(.b-loading) .b-current {
         border-right : 1px solid #fff;
+    }
+
+    svg.pressed {
+        fill : #eee;
     }
 
     pre {
