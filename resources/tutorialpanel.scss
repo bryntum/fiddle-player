@@ -5,6 +5,14 @@
     font-family   : Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
     border-radius : 10px;
 
+    &:not(.constructed) * {
+        transition : none !important;
+    }
+    &.constructed * {
+        transition-property : border, border-bottom-color, color, background-color;
+        transition-duration : .3s;
+    }
+
     &, * {
         box-sizing : border-box;
     }
@@ -21,12 +29,12 @@
     }
 
     .code-wrap {
-        position         : relative;
-        width            : 50%;
-        flex             : 1 1 50%;
-        display          : flex;
-        flex-direction   : column;
-        overflow         : hidden;
+        position       : relative;
+        width          : 50%;
+        flex           : 1 1 50%;
+        display        : flex;
+        flex-direction : column;
+        overflow       : hidden;
     }
 
     pre {
@@ -234,7 +242,7 @@
     }
 
     &.b-typing code {
-        pointer-events: none !important;
+        pointer-events : none !important;
 
         .b-line:not(.b-current-line) {
             display : none;
@@ -278,7 +286,7 @@
     }
 
     &:not(.b-loading) .b-current {
-        opacity      : 1;
+        opacity : 1;
     }
 
     .b-idle .b-current {
@@ -291,12 +299,12 @@
     &:not(.b-vertical) {
         .code-wrap,
         .b-codepanel-result {
-            @media (max-width: 1000px) {
+            @media (max-width : 1000px) {
                 min-height : 10%;
                 max-height : 90%;
             }
 
-            @media (min-width: 1000px) {
+            @media (min-width : 1000px) {
                 min-width : 10%;
                 max-width : 90%;
             }
@@ -375,20 +383,26 @@
     align-items : center;
     position    : relative;
 
-    svg[data-reference="toggleFullscreen"] {
-        margin-left : auto;
-        stroke      : none;
-        fill        : #aaa;
-        opacity     : 0.6;
-        transition  : opacity 0.3s;
-        cursor      : pointer;
-        height      : 20px;
-        width       : 20px;
-        transform   : scale(1.5);
+    svg {
+        &:first-of-type {
+            margin-left : auto;
+        }
+
+        fill       : #aaa;
+        opacity    : 0.6;
+        transition : opacity 0.3s;
+        stroke     : none;
+        cursor     : pointer;
 
         &:hover {
             opacity : 1;
         }
+    }
+
+    svg[action="toggleFullscreen"] {
+        transform : scale(1.5);
+        height    : 20px;
+        width     : 20px;
     }
 
     .b-js {
@@ -468,6 +482,7 @@ pre {
     background    : #fff;
     border-bottom : 1px solid;
     border-color  : #dfdfdf;
+    gap           : 0.5em;
 
     .b-fa {
         color : #888;
@@ -499,7 +514,7 @@ pre {
     transform      : rotate(90deg) scale(1.5);
     transform      : scale(1.5);
     background     : #fff;
-    transition     : all .4s;
+    transition     : border .3s, background .3s,stroke .3s;
 
     .b-tutorialpanel:not(.b-vertical) & {
         transform : rotate(90deg) scale(1.5);
@@ -581,8 +596,8 @@ pre {
     }
 
     .b-top-toolbar {
-        background    : #0d234e;
-        border-bottom : none;
+        background          : #0d234e;
+        border-bottom-color : #0d234e;
     }
 
     .b-codepanel-splitter {

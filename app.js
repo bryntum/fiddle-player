@@ -16,17 +16,17 @@ const
         }
         textArea.remove();
     },
-    loadScript = src => {
+    loadScript      = src => {
         return new Promise(resolve => {
-            const script = document.createElement('script');
-            script.src = src;
+            const script  = document.createElement('script');
+            script.src    = src;
             script.onload = resolve;
 
             document.head.appendChild(script);
         });
     };
 
-(async() => {
+(async () => {
     const
         params = new URLSearchParams(location.search),
         code   = params.get('c');
@@ -37,20 +37,20 @@ const
     if (code) {
         const codePanel = document.getElementById('codePanel');
 
-        codePanel.style.display = 'flex';
+        codePanel.style.display          = 'flex';
         codePanel.dataset['initialCode'] = code;
     }
     else {
         await loadScript('https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.13/ace.js');
 
         const
-            wrap          = document.getElementById('wrap'),
-            codeWrap      = document.getElementById('code-input'),
-            editor        = ace.edit('code-input'),
-            urlInput      = document.getElementById('url'),
+            wrap        = document.getElementById('wrap'),
+            codeWrap    = document.getElementById('code-input'),
+            editor      = ace.edit('code-input'),
+            urlInput    = document.getElementById('url'),
             previewLink = document.getElementById('previewLink'),
-            codeEl        = codeWrap.querySelector('.ace_content'),
-            copyButton    = document.getElementById('copyToClipboard');
+            codeEl      = codeWrap.querySelector('.ace_content'),
+            copyButton  = document.getElementById('copyToClipboard');
 
         wrap.style.display = 'flex';
         // editor.renderer.setPadding(10);

@@ -125,29 +125,29 @@
         data-keystroke-interval="1"
         data-interval-randomness="20"
         data-fit-content="true"
-        stylesheet="../../bryntum-suite/Gantt/build/gantt.classic-dark.css"
+        data-light-stylesheet="../../bryntum-suite/Gantt/build/gantt.stockholm.css"
+        data-dark-stylesheet="../../bryntum-suite/Gantt/build/gantt.classic-dark.css"
         data-resource-root="../resources"
         fa-path="../../bryntum-suite/Gantt/build/fonts"
         data-url="../snippets/gantt-basic.js"
         data-toggle-play-on-click="false"
-        data-inline-css="* { transition:none !important; }"
     >
     </tutorial-panel>
 </section>
 <script type="module" src="../lib/TutorialPanel.js"></script>
 <script>
-    const
-        panelEl           = document.querySelector('tutorial-panel'),
-        animationDisabler = () => {
-            const gantt = bryntum.query('gantt');
-            if (gantt) {
-                gantt.constructor.configurable.enableEventAnimations = false
-                // debugger
-                gantt.enableEventAnimations = false;
-            }
-        };
-
-    panelEl.addEventListener('lineExecuted', animationDisabler);
+    // const
+    //     panelEl           = document.querySelector('tutorial-panel'),
+    //     animationDisabler = () => {
+    //         const gantt = bryntum.query('gantt');
+    //         if (gantt) {
+    //             gantt.constructor.configurable.enableEventAnimations = false
+    //             // debugger
+    //             gantt.enableEventAnimations = false;
+    //         }
+    //     };
+    //
+    // panelEl.addEventListener('lineExecuted', animationDisabler);
 </script>
 </body>
 
