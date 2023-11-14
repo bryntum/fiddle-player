@@ -378,10 +378,19 @@
 }
 
 .b-top-toolbar {
-    padding     : 0.7em;
+    padding     : 1em;
     display     : flex;
     align-items : center;
     position    : relative;
+
+    background    : #fff;
+    border-bottom : 1px solid;
+    border-color  : #dfdfdf;
+    gap           : .7em;
+
+    .b-fa {
+        color : #888;
+    }
 
     svg {
         &:first-of-type {
@@ -397,12 +406,6 @@
         &:hover {
             opacity : 1;
         }
-    }
-
-    svg[action="toggleFullscreen"] {
-        transform : scale(1.5);
-        height    : 20px;
-        width     : 20px;
     }
 
     .b-js {
@@ -475,17 +478,6 @@ pre {
 
     .tag {
         color : #a5d6a7;
-    }
-}
-
-.b-top-toolbar {
-    background    : #fff;
-    border-bottom : 1px solid;
-    border-color  : #dfdfdf;
-    gap           : 0.5em;
-
-    .b-fa {
-        color : #888;
     }
 }
 
